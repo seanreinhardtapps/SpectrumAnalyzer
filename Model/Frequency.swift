@@ -8,15 +8,15 @@
 import Foundation
 
 
-struct Frequency: Codable, Identifiable {
-    var id: String
-    var db: Double
+public struct Frequency: Codable, Identifiable {
+    public var id: String
+    public var db: Float
     
-    func freq() -> String {
+    public func freq() -> String {
         return "\(id)"
     }
 }
 
-struct FrequencyResponse:Codable {
-    var response: [Frequency]
+public struct FrequencyResponse:Codable {
+    public var response: [Frequency]
 }

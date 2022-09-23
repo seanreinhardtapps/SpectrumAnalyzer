@@ -6,9 +6,8 @@
 //
 
 import Foundation
-
-class FrequencyResponseBuilder {
-    static func flatResponse() -> FrequencyResponse {
+public class FrequencyResponseBuilder {
+    public static func flatResponse() -> FrequencyResponse {
 
         return FrequencyResponse.init(response: [
             Frequency(id: "60hz", db: 10.0),
