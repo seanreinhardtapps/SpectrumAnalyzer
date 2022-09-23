@@ -11,10 +11,6 @@
 		9434391B28568A2600A147CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9434391A28568A2600A147CE /* ContentView.swift */; };
 		9434391D28568A2700A147CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9434391C28568A2700A147CE /* Assets.xcassets */; };
 		9434392028568A2700A147CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9434391F28568A2700A147CE /* Preview Assets.xcassets */; };
-		943439252856932600A147CE /* Frequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943439242856932600A147CE /* Frequency.swift */; };
-		943439262856932600A147CE /* Frequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943439242856932600A147CE /* Frequency.swift */; };
-		94343929285693FF00A147CE /* FrequencyResponseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94343928285693FF00A147CE /* FrequencyResponseBuilder.swift */; };
-		9434392A285693FF00A147CE /* FrequencyResponseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94343928285693FF00A147CE /* FrequencyResponseBuilder.swift */; };
 		9434392D2856976500A147CE /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9434392C2856976500A147CE /* ChartViewModel.swift */; };
 		9434392E2856976500A147CE /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9434392C2856976500A147CE /* ChartViewModel.swift */; };
 		943439392856B2A000A147CE /* AudioSpectrumKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 943439382856B2A000A147CE /* AudioSpectrumKit.docc */; };
@@ -27,6 +23,8 @@
 		943439582856C43000A147CE /* AudioSpectrumKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943439352856B2A000A147CE /* AudioSpectrumKit.framework */; };
 		943439592856C43000A147CE /* AudioSpectrumKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 943439352856B2A000A147CE /* AudioSpectrumKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9434395E2856D0F700A147CE /* AudioSpectrumKitErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9434395D2856D0F700A147CE /* AudioSpectrumKitErrorFactory.swift */; };
+		943439622862C10100A147CE /* Frequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943439242856932600A147CE /* Frequency.swift */; };
+		943439652862C3B300A147CE /* FrequencyResponseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94343928285693FF00A147CE /* FrequencyResponseBuilder.swift */; };
 		94766A092856815400F76C57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94766A082856815400F76C57 /* AppDelegate.swift */; };
 		94766A0B2856815400F76C57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94766A0A2856815400F76C57 /* SceneDelegate.swift */; };
 		94766A0D2856815400F76C57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94766A0C2856815400F76C57 /* ViewController.swift */; };
@@ -555,9 +553,7 @@
 			files = (
 				9434392E2856976500A147CE /* ChartViewModel.swift in Sources */,
 				9434391B28568A2600A147CE /* ContentView.swift in Sources */,
-				9434392A285693FF00A147CE /* FrequencyResponseBuilder.swift in Sources */,
 				9434391928568A2600A147CE /* SpectrumAnalyzerSwiftUIApp.swift in Sources */,
-				943439262856932600A147CE /* Frequency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,9 +562,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9434395E2856D0F700A147CE /* AudioSpectrumKitErrorFactory.swift in Sources */,
+				943439622862C10100A147CE /* Frequency.swift in Sources */,
 				943439542856B2EB00A147CE /* AudioSpectrumKit.swift in Sources */,
 				943439392856B2A000A147CE /* AudioSpectrumKit.docc in Sources */,
 				943439562856BFCB00A147CE /* SamplingInstance.swift in Sources */,
+				943439652862C3B300A147CE /* FrequencyResponseBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,7 +583,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9434392D2856976500A147CE /* ChartViewModel.swift in Sources */,
-				943439252856932600A147CE /* Frequency.swift in Sources */,
 				94766A0D2856815400F76C57 /* ViewController.swift in Sources */,
 				94766A092856815400F76C57 /* AppDelegate.swift in Sources */,
 				94766A0B2856815400F76C57 /* SceneDelegate.swift in Sources */,
@@ -597,7 +594,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				94766A202856815400F76C57 /* SpectrumAnalyzerTests.swift in Sources */,
-				94343929285693FF00A147CE /* FrequencyResponseBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
