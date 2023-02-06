@@ -17,6 +17,7 @@ public protocol AudioSpectrumKitResultsDelegate: NSObject {
 
 public class AudioSpectrumKit: NSObject, AudioSamplingInstanceDelegate {
     
+    internal var sampleRate:UInt = 4096
     var delegate: AudioSpectrumKitResultsDelegate?
     internal var audioSession: AVAudioSession {
         didSet {
@@ -42,7 +43,10 @@ public class AudioSpectrumKit: NSObject, AudioSamplingInstanceDelegate {
             return
         }
         
-        self.samplingInstance = SamplingInstance.init(delegate: self, audioSession: self.audioSession)
+        self.samplingInstance = SamplingInstance(delegate: self,
+                                                 rate: sampleRate,
+                                                 powerSpectrum: FFTPowerSpectrum(n: sampleRate),
+                                                 audioSession: self.audioSession)
     }
     
     func verifyRecordingPermissionKey(bundle:Bundle) -> Bool {
@@ -69,13 +73,7 @@ public class AudioSpectrumKit: NSObject, AudioSamplingInstanceDelegate {
         }
     }
     
-    func sampleProcessed(result: [Float]) {
-        var data: [Frequency] = []
-        for (index, value) in result.enumerated() {
-            if index % 100 == 0 {
-                data.append(Frequency(id: "\(index)Hz", db: value))
-            }
-        }
-        delegate?.didReceiveSample(frequencyResponse: FrequencyResponse(response: data))
+    func sampleProcessed(result: FrequencyResponse) {
+        delegate?.didReceiveSample(frequencyResponse: result)
     }
 }

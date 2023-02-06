@@ -10,7 +10,7 @@ import AVFoundation
 import Accelerate
 
 protocol AudioSamplingInstanceDelegate: NSObject {
-    func sampleProcessed(result:[Float])
+    func sampleProcessed(result:FrequencyResponse)
 }
 
 class SamplingInstance {
@@ -18,31 +18,28 @@ class SamplingInstance {
     weak var delegate: AudioSamplingInstanceDelegate?
     let engine:AVAudioEngine
     let audioSession:AVAudioSession
-    let n = vDSP_Length(4096)
-    lazy var halfN = Int(n / 2)
-    lazy var log2n = vDSP_Length(log2(Float(n)))
-
-    
-    lazy var fftSetUp = vDSP.FFT(log2n: log2n,
-                                  radix: .radix2,
-                                  ofType: DSPSplitComplex.self)
+    let n:Int
+    let frameCount: AVAudioFrameCount
+    let powerSpectrum: FFTPowerSpectrum
     
     init(delegate:AudioSamplingInstanceDelegate,
+         rate: UInt,
+         powerSpectrum:FFTPowerSpectrum,
          engine: AVAudioEngine = AVAudioEngine(),
          audioSession: AVAudioSession = AVAudioSession.sharedInstance()) {
         self.delegate = delegate
+        self.powerSpectrum = powerSpectrum
         self.engine = engine
         self.audioSession = audioSession
+        self.frameCount = AVAudioFrameCount(rate)
+        self.n = Int(rate)
     }
     
     func sample() {
-        
         let inputNode = engine.inputNode
         let format = inputNode.inputFormat(forBus: 0)
-        weak var weakSelf = self
-        inputNode.installTap(onBus: 0, bufferSize: 4096, format: format) {(buffer, time) in
-            let channelData = buffer.floatChannelData![0]
-            weakSelf?.performFFT(discreteSignal: Array(UnsafeBufferPointer(start:channelData, count: 4096)))
+        inputNode.installTap(onBus: 0, bufferSize: frameCount, format: format) { [weak self] (buffer, time) in
+            self?.onTap(buffer, time)
         }
         engine.prepare()
         do {
@@ -51,8 +48,37 @@ class SamplingInstance {
             print(error)
         }
     }
+
+    func onTap(_ buffer: AVAudioPCMBuffer, _ time:AVAudioTime) {
+        guard let data = buffer.floatChannelData else {
+            return
+        }
+        let channelData = Array(UnsafeBufferPointer(start: data[0], count: n))
+        self.powerSpectrum.execute(discreteSignal: channelData) { [weak self] response in
+            guard let self = self,
+                    let delegate = self.delegate else {
+                return
+            }
+            delegate.sampleProcessed(result: response)
+        }
+    }
+}
+
+typealias PowerSpectrumCompletion = ((FrequencyResponse) -> Void)
+class FFTPowerSpectrum {
+    let n: UInt
+    lazy var halfN = Int(n / 2)
+    lazy var log2n = vDSP_Length(log2(Float(n)))
     
-    func performFFT(discreteSignal:[Float]) {
+    lazy var fft = vDSP.FFT(log2n: log2n,
+                            radix: .radix2,
+                            ofType: DSPSplitComplex.self)
+    init(n:UInt) {
+        self.n = vDSP_Length(n)
+        self.halfN = halfN
+    }
+    
+    func execute(discreteSignal:[Float], _ completion:PowerSpectrumCompletion) {
         var forwardInputReal = [Float](repeating: 0, count: halfN)
         var forwardInputImag = [Float](repeating: 0, count: halfN)
         var forwardOutputReal = [Float](repeating: 0, count: halfN)
@@ -77,18 +103,20 @@ class SamplingInstance {
                         var forwardOutput = DSPSplitComplex(realp: forwardOutputRealPtr.baseAddress!,
                                                             imagp: forwardOutputImagPtr.baseAddress!)
                         
-                        if let setup = fftSetUp {
-                            setup.forward(input: forwardInput, output: &forwardOutput)
+                        if let fft = fft {
+                            fft.forward(input: forwardInput, output: &forwardOutput)
                         }
                         
                     }
                 }
             }
         }
-        self.computePowerDensity(realOutput: &forwardOutputReal, imaginaryOutput: &forwardOutputImag)
+        let autoSpectrum = self.computePowerDensity(realOutput: &forwardOutputReal,
+                                                    imaginaryOutput: &forwardOutputImag)
+        completion(FrequencyResponse(autoSpectrum: autoSpectrum))
     }
     
-    func computePowerDensity(realOutput:inout [Float], imaginaryOutput:inout [Float]){
+    func computePowerDensity(realOutput:inout [Float], imaginaryOutput:inout [Float]) -> [Float] {
         let autospectrum = [Float](unsafeUninitializedCapacity: halfN) {
             autospectrumBuffer, initializedCount in
             
@@ -109,9 +137,6 @@ class SamplingInstance {
             }
             initializedCount = halfN
         }
-        print("")
-        delegate?.sampleProcessed(result: autospectrum)
+        return autospectrum
     }
-    
 }
-

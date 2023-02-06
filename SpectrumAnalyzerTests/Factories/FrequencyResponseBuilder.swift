@@ -8,28 +8,27 @@
 import Foundation
 public class FrequencyResponseBuilder {
     public static func flatResponse() -> FrequencyResponse {
-
-        return FrequencyResponse.init(response: [
-            Frequency(id: "60hz", db: 10.0),
-            Frequency(id: "100hz", db: 10.0),
-            Frequency(id: "150hz", db: 10.0),
-            Frequency(id: "200hz", db: 10.0),
-            Frequency(id: "250hz", db: 10.0),
-            Frequency(id: "350hz", db: 10.0),
-            Frequency(id: "500hz", db: 10.0),
-            Frequency(id: "700hz", db: 10.0),
-            Frequency(id: "850hz", db: 10.0),
-            Frequency(id: "1khz", db: 10.0),
-            Frequency(id: "1.5khz", db: 10.0),
-            Frequency(id: "2khz", db: 10.0),
-            Frequency(id: "3khz", db: 10.0),
-            Frequency(id: "4khz", db: 10.0),
-            Frequency(id: "5khz", db: 10.0),
-            Frequency(id: "7.5khz", db: 10.0),
-            Frequency(id: "10khz", db: 10.0),
-            Frequency(id: "12khz", db: 10.0),
-            Frequency(id: "14khz", db: 10.0),
-            Frequency(id: "16khz", db: 10.0),
+        return FrequencyResponse(response: [
+            Frequency(index: 60, db: 10.0),
+            Frequency(index: 100, db: 10.0),
+            Frequency(index: 150, db: 10.0),
+            Frequency(index: 200, db: 10.0),
+            Frequency(index: 250, db: 10.0),
+            Frequency(index: 350, db: 10.0),
+            Frequency(index: 500, db: 10.0),
+            Frequency(index: 700, db: 10.0),
+            Frequency(index: 850, db: 10.0),
+            Frequency(index: 1000, db: 10.0),
+            Frequency(index: 1500, db: 10.0),
+            Frequency(index: 2000, db: 10.0),
+            Frequency(index: 3000, db: 10.0),
+            Frequency(index: 4000, db: 10.0),
+            Frequency(index: 5000, db: 10.0),
+            Frequency(index: 7500, db: 10.0),
+            Frequency(index: 10000, db: 10.0),
+            Frequency(index: 12000, db: 10.0),
+            Frequency(index: 14000, db: 10.0),
+            Frequency(index: 16000, db: 10.0),
         ])
     }
 }

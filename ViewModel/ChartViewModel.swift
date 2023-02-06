@@ -13,7 +13,7 @@ class ChartViewModel: NSObject, ObservableObject, AudioSpectrumKitResultsDelegat
     @Published var data:[Frequency]
     var audioSampler: AudioSpectrumKit?
     override init() {
-        data = FrequencyResponseBuilder.flatResponse().response
+        data = []
         super.init()
         audioSampler = AudioSpectrumKit.init(delegate: self)
         audioSampler?.start()
