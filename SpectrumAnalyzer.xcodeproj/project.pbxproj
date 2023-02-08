@@ -19,7 +19,6 @@
 		9434394A2856B2A100A147CE /* AudioSpectrumKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943439352856B2A000A147CE /* AudioSpectrumKit.framework */; };
 		9434394B2856B2A100A147CE /* AudioSpectrumKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 943439352856B2A000A147CE /* AudioSpectrumKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		943439542856B2EB00A147CE /* AudioSpectrumKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943439532856B2EB00A147CE /* AudioSpectrumKit.swift */; };
-		943439562856BFCB00A147CE /* SamplingInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943439552856BFCB00A147CE /* SamplingInstance.swift */; };
 		943439582856C43000A147CE /* AudioSpectrumKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943439352856B2A000A147CE /* AudioSpectrumKit.framework */; };
 		943439592856C43000A147CE /* AudioSpectrumKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 943439352856B2A000A147CE /* AudioSpectrumKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9434395E2856D0F700A147CE /* AudioSpectrumKitErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9434395D2856D0F700A147CE /* AudioSpectrumKitErrorFactory.swift */; };
@@ -35,6 +34,8 @@
 		94766A2C2856815400F76C57 /* SpectrumAnalyzerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94766A2B2856815400F76C57 /* SpectrumAnalyzerUITestsLaunchTests.swift */; };
 		94B00E382990D407005C69A1 /* FrequencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B00E372990D407005C69A1 /* FrequencyResponse.swift */; };
 		94B00E3A2990E9F3005C69A1 /* FrequencyResponseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94343928285693FF00A147CE /* FrequencyResponseBuilder.swift */; };
+		94B00E3C2990F3F5005C69A1 /* FFTPowerSpectrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B00E3B2990F3F5005C69A1 /* FFTPowerSpectrum.swift */; };
+		94B00E4129934EA1005C69A1 /* SamplingInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943439552856BFCB00A147CE /* SamplingInstance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		94766A292856815400F76C57 /* SpectrumAnalyzerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectrumAnalyzerUITests.swift; sourceTree = "<group>"; };
 		94766A2B2856815400F76C57 /* SpectrumAnalyzerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectrumAnalyzerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		94B00E372990D407005C69A1 /* FrequencyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequencyResponse.swift; sourceTree = "<group>"; };
+		94B00E3B2990F3F5005C69A1 /* FFTPowerSpectrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTPowerSpectrum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				943439552856BFCB00A147CE /* SamplingInstance.swift */,
+				94B00E3B2990F3F5005C69A1 /* FFTPowerSpectrum.swift */,
 			);
 			path = Sampling;
 			sourceTree = "<group>";
@@ -573,10 +576,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9434395E2856D0F700A147CE /* AudioSpectrumKitErrorFactory.swift in Sources */,
+				94B00E4129934EA1005C69A1 /* SamplingInstance.swift in Sources */,
 				943439622862C10100A147CE /* Frequency.swift in Sources */,
 				943439542856B2EB00A147CE /* AudioSpectrumKit.swift in Sources */,
 				943439392856B2A000A147CE /* AudioSpectrumKit.docc in Sources */,
-				943439562856BFCB00A147CE /* SamplingInstance.swift in Sources */,
+				94B00E3C2990F3F5005C69A1 /* FFTPowerSpectrum.swift in Sources */,
 				94B00E382990D407005C69A1 /* FrequencyResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

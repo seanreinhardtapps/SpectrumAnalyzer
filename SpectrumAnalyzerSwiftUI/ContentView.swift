@@ -15,12 +15,18 @@ struct ContentView: View {
         VStack {
             Chart {
                 ForEach(viewModel.data) { freq in
-                        BarMark(
-                            x: .value("Frequency", freq.id),
-                            y: .value("db", freq.db)
-                        )
-                    }
+//                        BarMark(
+//                            x: .value("Frequency", freq.id),
+//                            y: .value("db", freq.db)
+//                        )
+                    LineMark(
+                        x: .value("Frequency", freq.hz),
+                        y: .value("db", freq.db)
+                    )
+                }
             }
+            //.chartYScale(domain: 0...60)
+            .chartXScale(domain: 0...12000)
         }
     }
 }

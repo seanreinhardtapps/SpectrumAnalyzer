@@ -17,18 +17,9 @@ public protocol AudioSpectrumKitResultsDelegate: NSObject {
 
 public class AudioSpectrumKit: NSObject, AudioSamplingInstanceDelegate {
     
-    internal var sampleRate:UInt = 4096
+    internal var sampleRate:UInt = 16384
     var delegate: AudioSpectrumKitResultsDelegate?
-    internal var audioSession: AVAudioSession {
-        didSet {
-            do {
-                try audioSession.setCategory(.record)
-                try audioSession.setMode(AVAudioSession.Mode.measurement)
-            } catch {
-                delegate?.samplingFailedToSetup(error: error)
-            }
-        }
-    }
+    internal var audioSession: AVAudioSession
     
     internal var samplingInstance: SamplingInstance?
     public init(delegate: AudioSpectrumKitResultsDelegate? = nil,
@@ -37,7 +28,13 @@ public class AudioSpectrumKit: NSObject, AudioSamplingInstanceDelegate {
         self.delegate = delegate
         self.audioSession = audioSession
         super.init()
-        
+        do {
+            try audioSession.setCategory(.playAndRecord)
+            //try audioSession.setMode(AVAudioSession.Mode.measurement)
+            try audioSession.setActive(true)
+        } catch {
+            delegate?.samplingFailedToSetup(error: error)
+        }
         if !verifyRecordingPermissionKey(bundle: bundle) {
             delegate?.samplingFailedToSetup(error: AudioSpectrumKitErrorFactory.plistError())
             return
@@ -46,6 +43,7 @@ public class AudioSpectrumKit: NSObject, AudioSamplingInstanceDelegate {
         self.samplingInstance = SamplingInstance(delegate: self,
                                                  rate: sampleRate,
                                                  powerSpectrum: FFTPowerSpectrum(n: sampleRate),
+                                                 //powerSpectrum: DCTPowerSpectrum(n: Int(sampleRate)),
                                                  audioSession: self.audioSession)
     }
     
@@ -74,6 +72,8 @@ public class AudioSpectrumKit: NSObject, AudioSamplingInstanceDelegate {
     }
     
     func sampleProcessed(result: FrequencyResponse) {
-        delegate?.didReceiveSample(frequencyResponse: result)
+        DispatchQueue.main.async { [weak self] in
+            self?.delegate?.didReceiveSample(frequencyResponse: result)
+        }
     }
 }

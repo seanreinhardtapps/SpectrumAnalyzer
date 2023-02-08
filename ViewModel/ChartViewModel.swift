@@ -20,9 +20,7 @@ class ChartViewModel: NSObject, ObservableObject, AudioSpectrumKitResultsDelegat
     }
     
     func didReceiveSample(frequencyResponse: FrequencyResponse) {
-        DispatchQueue.main.async {
-            self.data = frequencyResponse.response
-        }
+        self.data = frequencyResponse.response
     }
     
     func samplingFailedToStart(error: Error) {
