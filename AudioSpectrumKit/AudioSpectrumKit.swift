@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Combine
 private let microphonePermissionKey = "NSMicrophoneUsageDescription"
 
 public protocol AudioSpectrumKitResultsDelegate: NSObject {
@@ -17,6 +18,7 @@ public protocol AudioSpectrumKitResultsDelegate: NSObject {
 
 public class AudioSpectrumKit: NSObject, AudioSamplingInstanceDelegate {
     
+    @Published private var frequencyResponse:FrequencyResponse = FrequencyResponse(response: [])
     internal var sampleSize:UInt = 8192
     var delegate: AudioSpectrumKitResultsDelegate?
     internal var audioSession: AVAudioSession
@@ -30,7 +32,7 @@ public class AudioSpectrumKit: NSObject, AudioSamplingInstanceDelegate {
         super.init()
         do {
             try audioSession.setCategory(.playAndRecord)
-            //try audioSession.setMode(AVAudioSession.Mode.measurement)
+            try audioSession.setMode(AVAudioSession.Mode.measurement)
             try audioSession.setActive(true)
         } catch {
             delegate?.samplingFailedToSetup(error: error)
@@ -54,6 +56,11 @@ public class AudioSpectrumKit: NSObject, AudioSamplingInstanceDelegate {
         return false
     }
     
+    public func startPublish() -> AnyPublisher<FrequencyResponse, Never> {
+        start()
+        return $frequencyResponse.eraseToAnyPublisher()
+    }
+    
     public func start() {
         weak var weakSelf = self
         audioSession.requestRecordPermission { (granted) -> Void in
@@ -73,6 +80,7 @@ public class AudioSpectrumKit: NSObject, AudioSamplingInstanceDelegate {
     
     func sampleProcessed(result: FrequencyResponse) {
         DispatchQueue.main.async { [weak self] in
+            self?.frequencyResponse = result
             self?.delegate?.didReceiveSample(frequencyResponse: result)
         }
     }
