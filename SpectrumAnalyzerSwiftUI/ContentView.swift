@@ -26,7 +26,7 @@ struct ContentView: View {
                 }
             }
             //.chartYScale(domain: 0...60)
-            //.chartXScale(domain: 0...12000)
+            .chartXScale(domain: 0...12000)
         }
     }
 }
