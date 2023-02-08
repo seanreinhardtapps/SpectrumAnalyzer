@@ -7,12 +7,19 @@
 
 import Foundation
 import Combine
-
-class ChartViewModel: ObservableObject {
+import AudioSpectrumKit
+class ChartViewModel: NSObject, ObservableObject {
     
+    var subscription:[AnyCancellable] = []
     @Published var data:[Frequency]
-    
-    init() {
-        data = FrequencyResponseBuilder.flatResponse().response
+    var audioSampler: AudioSpectrumKit?
+    override init() {
+        data = []
+        super.init()
+        audioSampler = AudioSpectrumKit.init()
+        audioSampler?.startPublish().sink(receiveValue: { frequencyResponse in
+            self.data = frequencyResponse.response
+        }).store(in: &subscription)
     }
+    
 }
