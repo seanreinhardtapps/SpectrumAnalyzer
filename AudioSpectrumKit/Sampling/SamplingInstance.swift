@@ -57,19 +57,14 @@ class SamplingInstance {
     }
 
     func onTap(_ buffer: AVAudioPCMBuffer, _ time:AVAudioTime) {
-        workerQueue.async { [weak self] in
-            guard let self = self,
-            let data = buffer.floatChannelData else {
-                return
-            }
+        guard let data = buffer.floatChannelData else {
+            return
+        }
+        Task {
             let channelData = Array(UnsafeBufferPointer(start: data[0], count: Int(buffer.frameLength)))
-            self.powerSpectrum.execute(discreteSignal: channelData, sampleRate: self.sampleRate) { [weak self] response in
-                guard let self = self,
-                        let delegate = self.delegate else {
-                    return
-                }
-                delegate.sampleProcessed(result: response)
-            }
+            let response = await self.powerSpectrum.execute(discreteSignal: channelData,
+                                                            sampleRate: self.sampleRate)
+            delegate?.sampleProcessed(result: response)
         }
     }
 }
