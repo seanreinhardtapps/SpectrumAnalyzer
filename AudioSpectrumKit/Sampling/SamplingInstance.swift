@@ -17,13 +17,13 @@ class SamplingInstance {
     weak var delegate: AudioSamplingInstanceDelegate?
     let engine:AVAudioEngine
     let audioSession:AVAudioSession
-    let n:Int
-    let frameCount: AVAudioFrameCount
+    let frameSize: AVAudioFrameCount
+    let sampleRate:Double
     let powerSpectrum: PowerSpectrumCalculation
     let workerQueue:DispatchQueue
     
     init(delegate:AudioSamplingInstanceDelegate,
-         rate: UInt,
+         sampleSize: UInt,
          powerSpectrum:PowerSpectrumCalculation,
          engine: AVAudioEngine = AVAudioEngine(),
          audioSession: AVAudioSession = AVAudioSession.sharedInstance(),
@@ -32,9 +32,9 @@ class SamplingInstance {
         self.powerSpectrum = powerSpectrum
         self.engine = engine
         self.audioSession = audioSession
-        self.frameCount = AVAudioFrameCount(rate)
-        self.n = Int(rate)
+        self.frameSize = AVAudioFrameCount(sampleSize)
         self.workerQueue = queue
+        self.sampleRate = audioSession.sampleRate
     }
     
     func sample() {
@@ -42,10 +42,9 @@ class SamplingInstance {
             guard let self = self else {
                 return
             }
-            let sampleRate = self.audioSession.sampleRate
             let inputNode = self.engine.inputNode
             let format = inputNode.inputFormat(forBus: 0)
-            inputNode.installTap(onBus: 0, bufferSize: self.frameCount, format: format) { [weak self] (buffer, time) in
+            inputNode.installTap(onBus: 0, bufferSize: self.frameSize, format: format) { [weak self] (buffer, time) in
                 self?.onTap(buffer, time)
             }
             self.engine.prepare()
@@ -64,7 +63,7 @@ class SamplingInstance {
                 return
             }
             let channelData = Array(UnsafeBufferPointer(start: data[0], count: Int(buffer.frameLength)))
-            self.powerSpectrum.execute(discreteSignal: channelData) { [weak self] response in
+            self.powerSpectrum.execute(discreteSignal: channelData, sampleRate: self.sampleRate) { [weak self] response in
                 guard let self = self,
                         let delegate = self.delegate else {
                     return

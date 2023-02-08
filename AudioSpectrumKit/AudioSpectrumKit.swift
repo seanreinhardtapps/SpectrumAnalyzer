@@ -17,7 +17,7 @@ public protocol AudioSpectrumKitResultsDelegate: NSObject {
 
 public class AudioSpectrumKit: NSObject, AudioSamplingInstanceDelegate {
     
-    internal var sampleRate:UInt = 16384
+    internal var sampleSize:UInt = 8192
     var delegate: AudioSpectrumKitResultsDelegate?
     internal var audioSession: AVAudioSession
     
@@ -41,8 +41,8 @@ public class AudioSpectrumKit: NSObject, AudioSamplingInstanceDelegate {
         }
         
         self.samplingInstance = SamplingInstance(delegate: self,
-                                                 rate: sampleRate,
-                                                 powerSpectrum: FFTPowerSpectrum(n: sampleRate),
+                                                 sampleSize: sampleSize,
+                                                 powerSpectrum: FFTPowerSpectrum(n: sampleSize),
                                                  //powerSpectrum: DCTPowerSpectrum(n: Int(sampleRate)),
                                                  audioSession: self.audioSession)
     }

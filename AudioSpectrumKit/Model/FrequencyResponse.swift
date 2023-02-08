@@ -14,12 +14,10 @@ public struct FrequencyResponse:Codable {
         self.response = response
     }
     
-    init(autoSpectrum: [Float]) {
+    init(autoSpectrum: [Float], bucketSize:Double) {
         self.response = []
         for (index, value) in autoSpectrum.enumerated() {
-            if index % 100 == 0 {
-                self.response.append(Frequency(index: index, db: value))
-            }
+            self.response.append(Frequency(index: index, db: value, bucketSize: bucketSize))
         }
     }
 }
