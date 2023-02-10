@@ -11,97 +11,17 @@
 		9434391B28568A2600A147CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9434391A28568A2600A147CE /* ContentView.swift */; };
 		9434391D28568A2700A147CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9434391C28568A2700A147CE /* Assets.xcassets */; };
 		9434392028568A2700A147CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9434391F28568A2700A147CE /* Preview Assets.xcassets */; };
-		9434392D2856976500A147CE /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9434392C2856976500A147CE /* ChartViewModel.swift */; };
 		9434392E2856976500A147CE /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9434392C2856976500A147CE /* ChartViewModel.swift */; };
-		943439392856B2A000A147CE /* AudioSpectrumKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 943439382856B2A000A147CE /* AudioSpectrumKit.docc */; };
-		9434393F2856B2A100A147CE /* AudioSpectrumKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943439352856B2A000A147CE /* AudioSpectrumKit.framework */; };
-		943439462856B2A100A147CE /* AudioSpectrumKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943439452856B2A100A147CE /* AudioSpectrumKitTests.swift */; };
-		9434394A2856B2A100A147CE /* AudioSpectrumKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943439352856B2A000A147CE /* AudioSpectrumKit.framework */; };
-		9434394B2856B2A100A147CE /* AudioSpectrumKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 943439352856B2A000A147CE /* AudioSpectrumKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		943439542856B2EB00A147CE /* AudioSpectrumKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943439532856B2EB00A147CE /* AudioSpectrumKit.swift */; };
-		943439582856C43000A147CE /* AudioSpectrumKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943439352856B2A000A147CE /* AudioSpectrumKit.framework */; };
-		943439592856C43000A147CE /* AudioSpectrumKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 943439352856B2A000A147CE /* AudioSpectrumKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9434395E2856D0F700A147CE /* AudioSpectrumKitErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9434395D2856D0F700A147CE /* AudioSpectrumKitErrorFactory.swift */; };
-		943439622862C10100A147CE /* Frequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943439242856932600A147CE /* Frequency.swift */; };
-		94766A092856815400F76C57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94766A082856815400F76C57 /* AppDelegate.swift */; };
-		94766A0B2856815400F76C57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94766A0A2856815400F76C57 /* SceneDelegate.swift */; };
-		94766A0D2856815400F76C57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94766A0C2856815400F76C57 /* ViewController.swift */; };
-		94766A102856815400F76C57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94766A0E2856815400F76C57 /* Main.storyboard */; };
-		94766A122856815400F76C57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94766A112856815400F76C57 /* Assets.xcassets */; };
-		94766A152856815400F76C57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94766A132856815400F76C57 /* LaunchScreen.storyboard */; };
-		94766A202856815400F76C57 /* SpectrumAnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94766A1F2856815400F76C57 /* SpectrumAnalyzerTests.swift */; };
-		94766A2A2856815400F76C57 /* SpectrumAnalyzerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94766A292856815400F76C57 /* SpectrumAnalyzerUITests.swift */; };
-		94766A2C2856815400F76C57 /* SpectrumAnalyzerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94766A2B2856815400F76C57 /* SpectrumAnalyzerUITestsLaunchTests.swift */; };
-		94B00E382990D407005C69A1 /* FrequencyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B00E372990D407005C69A1 /* FrequencyResponse.swift */; };
-		94B00E3A2990E9F3005C69A1 /* FrequencyResponseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94343928285693FF00A147CE /* FrequencyResponseBuilder.swift */; };
-		94B00E3C2990F3F5005C69A1 /* FFTPowerSpectrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B00E3B2990F3F5005C69A1 /* FFTPowerSpectrum.swift */; };
-		94B00E4129934EA1005C69A1 /* SamplingInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943439552856BFCB00A147CE /* SamplingInstance.swift */; };
+		9438DAAB29963A3A00D37FDA /* AudioSpectrumKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9438DAAA29963A3A00D37FDA /* AudioSpectrumKit */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		943439402856B2A100A147CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 947669FD2856815400F76C57 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 943439342856B2A000A147CE;
-			remoteInfo = AudioSpectrumKit;
-		};
-		943439422856B2A100A147CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 947669FD2856815400F76C57 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 94766A042856815400F76C57;
-			remoteInfo = SpectrumAnalyzer;
-		};
-		943439482856B2A100A147CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 947669FD2856815400F76C57 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 943439342856B2A000A147CE;
-			remoteInfo = AudioSpectrumKit;
-		};
-		9434395A2856C43000A147CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 947669FD2856815400F76C57 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 943439342856B2A000A147CE;
-			remoteInfo = AudioSpectrumKit;
-		};
-		94766A1C2856815400F76C57 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 947669FD2856815400F76C57 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 94766A042856815400F76C57;
-			remoteInfo = SpectrumAnalyzer;
-		};
-		94766A262856815400F76C57 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 947669FD2856815400F76C57 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 94766A042856815400F76C57;
-			remoteInfo = SpectrumAnalyzer;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		9434394F2856B2A100A147CE /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				9434394B2856B2A100A147CE /* AudioSpectrumKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9434395C2856C43000A147CE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				943439592856C43000A147CE /* AudioSpectrumKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,31 +34,7 @@
 		9434391A28568A2600A147CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9434391C28568A2700A147CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9434391F28568A2700A147CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		943439242856932600A147CE /* Frequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frequency.swift; sourceTree = "<group>"; };
-		94343928285693FF00A147CE /* FrequencyResponseBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequencyResponseBuilder.swift; sourceTree = "<group>"; };
 		9434392C2856976500A147CE /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
-		943439352856B2A000A147CE /* AudioSpectrumKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AudioSpectrumKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		943439382856B2A000A147CE /* AudioSpectrumKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = AudioSpectrumKit.docc; sourceTree = "<group>"; };
-		9434393E2856B2A100A147CE /* AudioSpectrumKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioSpectrumKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		943439452856B2A100A147CE /* AudioSpectrumKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSpectrumKitTests.swift; sourceTree = "<group>"; };
-		943439532856B2EB00A147CE /* AudioSpectrumKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSpectrumKit.swift; sourceTree = "<group>"; };
-		943439552856BFCB00A147CE /* SamplingInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplingInstance.swift; sourceTree = "<group>"; };
-		9434395D2856D0F700A147CE /* AudioSpectrumKitErrorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSpectrumKitErrorFactory.swift; sourceTree = "<group>"; };
-		94766A052856815400F76C57 /* SpectrumAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpectrumAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		94766A082856815400F76C57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		94766A0A2856815400F76C57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		94766A0C2856815400F76C57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		94766A0F2856815400F76C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		94766A112856815400F76C57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		94766A142856815400F76C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		94766A162856815400F76C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94766A1B2856815400F76C57 /* SpectrumAnalyzerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpectrumAnalyzerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94766A1F2856815400F76C57 /* SpectrumAnalyzerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectrumAnalyzerTests.swift; sourceTree = "<group>"; };
-		94766A252856815400F76C57 /* SpectrumAnalyzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpectrumAnalyzerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94766A292856815400F76C57 /* SpectrumAnalyzerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectrumAnalyzerUITests.swift; sourceTree = "<group>"; };
-		94766A2B2856815400F76C57 /* SpectrumAnalyzerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectrumAnalyzerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		94B00E372990D407005C69A1 /* FrequencyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequencyResponse.swift; sourceTree = "<group>"; };
-		94B00E3B2990F3F5005C69A1 /* FFTPowerSpectrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTPowerSpectrum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,44 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				943439582856C43000A147CE /* AudioSpectrumKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		943439322856B2A000A147CE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9434393B2856B2A100A147CE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9434393F2856B2A100A147CE /* AudioSpectrumKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94766A022856815400F76C57 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9434394A2856B2A100A147CE /* AudioSpectrumKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94766A182856815400F76C57 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94766A222856815400F76C57 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				9438DAAB29963A3A00D37FDA /* AudioSpectrumKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,49 +68,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		94343927285693D400A147CE /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-				94343928285693FF00A147CE /* FrequencyResponseBuilder.swift */,
-			);
-			path = Factories;
-			sourceTree = "<group>";
-		};
 		9434392B2856966B00A147CE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				9434392C2856976500A147CE /* ChartViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		9434392F2856A10000A147CE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				943439242856932600A147CE /* Frequency.swift */,
-				94B00E372990D407005C69A1 /* FrequencyResponse.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		943439362856B2A000A147CE /* AudioSpectrumKit */ = {
-			isa = PBXGroup;
-			children = (
-				9434392F2856A10000A147CE /* Model */,
-				943439532856B2EB00A147CE /* AudioSpectrumKit.swift */,
-				9434395D2856D0F700A147CE /* AudioSpectrumKitErrorFactory.swift */,
-				94B00E392990DA78005C69A1 /* Sampling */,
-				943439382856B2A000A147CE /* AudioSpectrumKit.docc */,
-			);
-			path = AudioSpectrumKit;
-			sourceTree = "<group>";
-		};
-		943439442856B2A100A147CE /* AudioSpectrumKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				943439452856B2A100A147CE /* AudioSpectrumKitTests.swift */,
-			);
-			path = AudioSpectrumKitTests;
 			sourceTree = "<group>";
 		};
 		943439572856C43000A147CE /* Frameworks */ = {
@@ -265,12 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				9434392B2856966B00A147CE /* ViewModel */,
-				94766A072856815400F76C57 /* SpectrumAnalyzer */,
-				94766A1E2856815400F76C57 /* SpectrumAnalyzerTests */,
-				94766A282856815400F76C57 /* SpectrumAnalyzerUITests */,
 				9434391728568A2600A147CE /* SpectrumAnalyzerSwiftUI */,
-				943439362856B2A000A147CE /* AudioSpectrumKit */,
-				943439442856B2A100A147CE /* AudioSpectrumKitTests */,
 				94766A062856815400F76C57 /* Products */,
 				943439572856C43000A147CE /* Frameworks */,
 			);
@@ -279,68 +96,12 @@
 		94766A062856815400F76C57 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				94766A052856815400F76C57 /* SpectrumAnalyzer.app */,
-				94766A1B2856815400F76C57 /* SpectrumAnalyzerTests.xctest */,
-				94766A252856815400F76C57 /* SpectrumAnalyzerUITests.xctest */,
 				9434391628568A2600A147CE /* SpectrumAnalyzerSwiftUI.app */,
-				943439352856B2A000A147CE /* AudioSpectrumKit.framework */,
-				9434393E2856B2A100A147CE /* AudioSpectrumKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		94766A072856815400F76C57 /* SpectrumAnalyzer */ = {
-			isa = PBXGroup;
-			children = (
-				94766A082856815400F76C57 /* AppDelegate.swift */,
-				94766A0A2856815400F76C57 /* SceneDelegate.swift */,
-				94766A0C2856815400F76C57 /* ViewController.swift */,
-				94766A0E2856815400F76C57 /* Main.storyboard */,
-				94766A112856815400F76C57 /* Assets.xcassets */,
-				94766A132856815400F76C57 /* LaunchScreen.storyboard */,
-				94766A162856815400F76C57 /* Info.plist */,
-			);
-			path = SpectrumAnalyzer;
-			sourceTree = "<group>";
-		};
-		94766A1E2856815400F76C57 /* SpectrumAnalyzerTests */ = {
-			isa = PBXGroup;
-			children = (
-				94343927285693D400A147CE /* Factories */,
-				94766A1F2856815400F76C57 /* SpectrumAnalyzerTests.swift */,
-			);
-			path = SpectrumAnalyzerTests;
-			sourceTree = "<group>";
-		};
-		94766A282856815400F76C57 /* SpectrumAnalyzerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				94766A292856815400F76C57 /* SpectrumAnalyzerUITests.swift */,
-				94766A2B2856815400F76C57 /* SpectrumAnalyzerUITestsLaunchTests.swift */,
-			);
-			path = SpectrumAnalyzerUITests;
-			sourceTree = "<group>";
-		};
-		94B00E392990DA78005C69A1 /* Sampling */ = {
-			isa = PBXGroup;
-			children = (
-				943439552856BFCB00A147CE /* SamplingInstance.swift */,
-				94B00E3B2990F3F5005C69A1 /* FFTPowerSpectrum.swift */,
-			);
-			path = Sampling;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		943439302856B2A000A147CE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		9434391528568A2600A147CE /* SpectrumAnalyzerSwiftUI */ = {
@@ -355,104 +116,14 @@
 			buildRules = (
 			);
 			dependencies = (
-				9434395B2856C43000A147CE /* PBXTargetDependency */,
 			);
 			name = SpectrumAnalyzerSwiftUI;
+			packageProductDependencies = (
+				9438DAAA29963A3A00D37FDA /* AudioSpectrumKit */,
+			);
 			productName = SpectrumAnalyzerSwiftUI;
 			productReference = 9434391628568A2600A147CE /* SpectrumAnalyzerSwiftUI.app */;
 			productType = "com.apple.product-type.application";
-		};
-		943439342856B2A000A147CE /* AudioSpectrumKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9434394C2856B2A100A147CE /* Build configuration list for PBXNativeTarget "AudioSpectrumKit" */;
-			buildPhases = (
-				943439302856B2A000A147CE /* Headers */,
-				943439312856B2A000A147CE /* Sources */,
-				943439322856B2A000A147CE /* Frameworks */,
-				943439332856B2A000A147CE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AudioSpectrumKit;
-			productName = AudioSpectrumKit;
-			productReference = 943439352856B2A000A147CE /* AudioSpectrumKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		9434393D2856B2A100A147CE /* AudioSpectrumKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 943439502856B2A100A147CE /* Build configuration list for PBXNativeTarget "AudioSpectrumKitTests" */;
-			buildPhases = (
-				9434393A2856B2A100A147CE /* Sources */,
-				9434393B2856B2A100A147CE /* Frameworks */,
-				9434393C2856B2A100A147CE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				943439412856B2A100A147CE /* PBXTargetDependency */,
-				943439432856B2A100A147CE /* PBXTargetDependency */,
-			);
-			name = AudioSpectrumKitTests;
-			productName = AudioSpectrumKitTests;
-			productReference = 9434393E2856B2A100A147CE /* AudioSpectrumKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		94766A042856815400F76C57 /* SpectrumAnalyzer */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 94766A2F2856815400F76C57 /* Build configuration list for PBXNativeTarget "SpectrumAnalyzer" */;
-			buildPhases = (
-				94766A012856815400F76C57 /* Sources */,
-				94766A022856815400F76C57 /* Frameworks */,
-				94766A032856815400F76C57 /* Resources */,
-				9434394F2856B2A100A147CE /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				943439492856B2A100A147CE /* PBXTargetDependency */,
-			);
-			name = SpectrumAnalyzer;
-			productName = SpectrumAnalyzer;
-			productReference = 94766A052856815400F76C57 /* SpectrumAnalyzer.app */;
-			productType = "com.apple.product-type.application";
-		};
-		94766A1A2856815400F76C57 /* SpectrumAnalyzerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 94766A322856815400F76C57 /* Build configuration list for PBXNativeTarget "SpectrumAnalyzerTests" */;
-			buildPhases = (
-				94766A172856815400F76C57 /* Sources */,
-				94766A182856815400F76C57 /* Frameworks */,
-				94766A192856815400F76C57 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				94766A1D2856815400F76C57 /* PBXTargetDependency */,
-			);
-			name = SpectrumAnalyzerTests;
-			productName = SpectrumAnalyzerTests;
-			productReference = 94766A1B2856815400F76C57 /* SpectrumAnalyzerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		94766A242856815400F76C57 /* SpectrumAnalyzerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 94766A352856815400F76C57 /* Build configuration list for PBXNativeTarget "SpectrumAnalyzerUITests" */;
-			buildPhases = (
-				94766A212856815400F76C57 /* Sources */,
-				94766A222856815400F76C57 /* Frameworks */,
-				94766A232856815400F76C57 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				94766A272856815400F76C57 /* PBXTargetDependency */,
-			);
-			name = SpectrumAnalyzerUITests;
-			productName = SpectrumAnalyzerUITests;
-			productReference = 94766A252856815400F76C57 /* SpectrumAnalyzerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -467,24 +138,6 @@
 					9434391528568A2600A147CE = {
 						CreatedOnToolsVersion = 14.0;
 					};
-					943439342856B2A000A147CE = {
-						CreatedOnToolsVersion = 14.0;
-					};
-					9434393D2856B2A100A147CE = {
-						CreatedOnToolsVersion = 14.0;
-						TestTargetID = 94766A042856815400F76C57;
-					};
-					94766A042856815400F76C57 = {
-						CreatedOnToolsVersion = 14.0;
-					};
-					94766A1A2856815400F76C57 = {
-						CreatedOnToolsVersion = 14.0;
-						TestTargetID = 94766A042856815400F76C57;
-					};
-					94766A242856815400F76C57 = {
-						CreatedOnToolsVersion = 14.0;
-						TestTargetID = 94766A042856815400F76C57;
-					};
 				};
 			};
 			buildConfigurationList = 94766A002856815400F76C57 /* Build configuration list for PBXProject "SpectrumAnalyzer" */;
@@ -496,16 +149,14 @@
 				Base,
 			);
 			mainGroup = 947669FC2856815400F76C57;
+			packageReferences = (
+				9438DAA929963A3A00D37FDA /* XCRemoteSwiftPackageReference "AudioSpectrumKit" */,
+			);
 			productRefGroup = 94766A062856815400F76C57 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				94766A042856815400F76C57 /* SpectrumAnalyzer */,
-				94766A1A2856815400F76C57 /* SpectrumAnalyzerTests */,
-				94766A242856815400F76C57 /* SpectrumAnalyzerUITests */,
 				9434391528568A2600A147CE /* SpectrumAnalyzerSwiftUI */,
-				943439342856B2A000A147CE /* AudioSpectrumKit */,
-				9434393D2856B2A100A147CE /* AudioSpectrumKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -517,44 +168,6 @@
 			files = (
 				9434392028568A2700A147CE /* Preview Assets.xcassets in Resources */,
 				9434391D28568A2700A147CE /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		943439332856B2A000A147CE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9434393C2856B2A100A147CE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94766A032856815400F76C57 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				94766A152856815400F76C57 /* LaunchScreen.storyboard in Resources */,
-				94766A122856815400F76C57 /* Assets.xcassets in Resources */,
-				94766A102856815400F76C57 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94766A192856815400F76C57 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94766A232856815400F76C57 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,110 +184,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		943439312856B2A000A147CE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9434395E2856D0F700A147CE /* AudioSpectrumKitErrorFactory.swift in Sources */,
-				94B00E4129934EA1005C69A1 /* SamplingInstance.swift in Sources */,
-				943439622862C10100A147CE /* Frequency.swift in Sources */,
-				943439542856B2EB00A147CE /* AudioSpectrumKit.swift in Sources */,
-				943439392856B2A000A147CE /* AudioSpectrumKit.docc in Sources */,
-				94B00E3C2990F3F5005C69A1 /* FFTPowerSpectrum.swift in Sources */,
-				94B00E382990D407005C69A1 /* FrequencyResponse.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9434393A2856B2A100A147CE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				943439462856B2A100A147CE /* AudioSpectrumKitTests.swift in Sources */,
-				94B00E3A2990E9F3005C69A1 /* FrequencyResponseBuilder.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94766A012856815400F76C57 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9434392D2856976500A147CE /* ChartViewModel.swift in Sources */,
-				94766A0D2856815400F76C57 /* ViewController.swift in Sources */,
-				94766A092856815400F76C57 /* AppDelegate.swift in Sources */,
-				94766A0B2856815400F76C57 /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94766A172856815400F76C57 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				94766A202856815400F76C57 /* SpectrumAnalyzerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94766A212856815400F76C57 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				94766A2A2856815400F76C57 /* SpectrumAnalyzerUITests.swift in Sources */,
-				94766A2C2856815400F76C57 /* SpectrumAnalyzerUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		943439412856B2A100A147CE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 943439342856B2A000A147CE /* AudioSpectrumKit */;
-			targetProxy = 943439402856B2A100A147CE /* PBXContainerItemProxy */;
-		};
-		943439432856B2A100A147CE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 94766A042856815400F76C57 /* SpectrumAnalyzer */;
-			targetProxy = 943439422856B2A100A147CE /* PBXContainerItemProxy */;
-		};
-		943439492856B2A100A147CE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 943439342856B2A000A147CE /* AudioSpectrumKit */;
-			targetProxy = 943439482856B2A100A147CE /* PBXContainerItemProxy */;
-		};
-		9434395B2856C43000A147CE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 943439342856B2A000A147CE /* AudioSpectrumKit */;
-			targetProxy = 9434395A2856C43000A147CE /* PBXContainerItemProxy */;
-		};
-		94766A1D2856815400F76C57 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 94766A042856815400F76C57 /* SpectrumAnalyzer */;
-			targetProxy = 94766A1C2856815400F76C57 /* PBXContainerItemProxy */;
-		};
-		94766A272856815400F76C57 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 94766A042856815400F76C57 /* SpectrumAnalyzer */;
-			targetProxy = 94766A262856815400F76C57 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		94766A0E2856815400F76C57 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				94766A0F2856815400F76C57 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		94766A132856815400F76C57 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				94766A142856815400F76C57 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9434392128568A2700A147CE /* Debug */ = {
@@ -734,104 +244,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		9434394D2856B2A100A147CE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = M88KHK6346;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seanreinhardtapps.AudioSpectrumKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9434394E2856B2A100A147CE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = M88KHK6346;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seanreinhardtapps.AudioSpectrumKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		943439512856B2A100A147CE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M88KHK6346;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seanreinhardtapps.AudioSpectrumKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpectrumAnalyzer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpectrumAnalyzer";
-			};
-			name = Debug;
-		};
-		943439522856B2A100A147CE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M88KHK6346;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seanreinhardtapps.AudioSpectrumKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpectrumAnalyzer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpectrumAnalyzer";
 			};
 			name = Release;
 		};
@@ -949,140 +361,6 @@
 			};
 			name = Release;
 		};
-		94766A302856815400F76C57 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M88KHK6346;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SpectrumAnalyzer/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seanreinhardtapps.SpectrumAnalyzer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		94766A312856815400F76C57 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M88KHK6346;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SpectrumAnalyzer/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seanreinhardtapps.SpectrumAnalyzer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		94766A332856815400F76C57 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M88KHK6346;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seanreinhardtapps.SpectrumAnalyzerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpectrumAnalyzer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpectrumAnalyzer";
-			};
-			name = Debug;
-		};
-		94766A342856815400F76C57 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M88KHK6346;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seanreinhardtapps.SpectrumAnalyzerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpectrumAnalyzer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpectrumAnalyzer";
-			};
-			name = Release;
-		};
-		94766A362856815400F76C57 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M88KHK6346;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seanreinhardtapps.SpectrumAnalyzerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SpectrumAnalyzer;
-			};
-			name = Debug;
-		};
-		94766A372856815400F76C57 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M88KHK6346;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.seanreinhardtapps.SpectrumAnalyzerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SpectrumAnalyzer;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1091,24 +369,6 @@
 			buildConfigurations = (
 				9434392128568A2700A147CE /* Debug */,
 				9434392228568A2700A147CE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9434394C2856B2A100A147CE /* Build configuration list for PBXNativeTarget "AudioSpectrumKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9434394D2856B2A100A147CE /* Debug */,
-				9434394E2856B2A100A147CE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		943439502856B2A100A147CE /* Build configuration list for PBXNativeTarget "AudioSpectrumKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				943439512856B2A100A147CE /* Debug */,
-				943439522856B2A100A147CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1122,34 +382,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94766A2F2856815400F76C57 /* Build configuration list for PBXNativeTarget "SpectrumAnalyzer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94766A302856815400F76C57 /* Debug */,
-				94766A312856815400F76C57 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		94766A322856815400F76C57 /* Build configuration list for PBXNativeTarget "SpectrumAnalyzerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94766A332856815400F76C57 /* Debug */,
-				94766A342856815400F76C57 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		94766A352856815400F76C57 /* Build configuration list for PBXNativeTarget "SpectrumAnalyzerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94766A362856815400F76C57 /* Debug */,
-				94766A372856815400F76C57 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9438DAA929963A3A00D37FDA /* XCRemoteSwiftPackageReference "AudioSpectrumKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/seanreinhardtapps/AudioSpectrumKit.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9438DAAA29963A3A00D37FDA /* AudioSpectrumKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9438DAA929963A3A00D37FDA /* XCRemoteSwiftPackageReference "AudioSpectrumKit" */;
+			productName = AudioSpectrumKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 947669FD2856815400F76C57 /* Project object */;
 }
